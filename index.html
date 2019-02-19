@@ -1,0 +1,43 @@
+<!--Emilio Castillo Fernández A01335139 V2.0-->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Sistema Solar | A01335139</title>
+
+	<link rel="stylesheet" href="libs/jquery-ui/jquery-ui.css">
+	<link rel="stylesheet" href="libs/colorpicker/css/colorpicker.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/threejslights.css">
+
+	<script src="libs/jquery-3.3.1/jquery-3.3.1.js"></script>
+	<script src="libs/jquery-ui/jquery-ui.js"></script>
+	<script src="libs/three.js/three.js"></script>
+	<script src="libs/three.js/controls/OrbitControls.js"></script>
+	<script src="libs/colorpicker/js/colorpicker.js"></script>
+	<script src="sceneHandler.js"></script>
+	<script src="mainCode.js"></script>
+	<script type="text/javascript">
+		$(document).ready(
+			function () {
+				var canvas = document.getElementById("webglcanvas");
+				createScene(canvas);
+				initControls();
+				run();
+			}
+		);
+	</script>
+</head>
+
+<body>
+
+	<div id="container">
+		<canvas id="webglcanvas" width=1800 height=1024></canvas>
+		<div id="title" style="color:white;">
+			Sistema Solar
+		</div>
+		<div id="prompt" style="color:white;">
+			Drag the mouse to rotate the camera<br>Use the scroll wheel to zoom.
+		</div>
+	</div>
+
+</html>
