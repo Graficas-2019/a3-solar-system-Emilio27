@@ -296,7 +296,7 @@ function createScene(canvas) {
   scene = new THREE.Scene();
   fondoImg.wrapS = fondoImg.wrapT = THREE.RepeatWrapping;
   fondoImg.repeat.set(1, 1);
-  scene.background = fondoImg
+  // scene.background = fondoImg
   camera = new THREE.PerspectiveCamera(45, canvas.width / canvas.height, 1, 40000);
   camera.position.set(-200, 60, 120);
   scene.add(camera);
@@ -446,7 +446,7 @@ function createScene(canvas) {
   mAsteroide = new THREE.TextureLoader().load(asteroideImg1);
   matAsteroide = new THREE.MeshBasicMaterial({ map: mAsteroide });
   geoAsteroide = new THREE.SphereGeometry(1, 50, 50);
-  for (i = 0; i < 1000; i++) {
+  for (i = 0; i < 10; i++) {
     var ran1 = Math.floor(Math.random() * ((dJupiter - 100) - (dMarte + 100)) + (dMarte - 100));
     ran1 *= Math.floor(Math.random() * 2) == 1 ? 1 : -1;
     var ran2 = Math.floor(Math.random() * ((120) - (1)) + (1));
